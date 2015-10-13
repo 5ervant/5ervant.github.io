@@ -1,11 +1,14 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+This is my official website where will I publish some of my products and services about desktop and web application development, and where will I post some blogs about technology. My legal name is Mark Anthony B. Dungo and I'm an autodidact software developer that have a comprehensive skillset, either for web or for desktop.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+You can overview my skills using my online resumes that are listed below:
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+ - [LinkedIn Profile](https://ph.linkedin.com/in/5ervant){:target="_blank"}
+ - [Stack Overflow Careers Profile](https://careers.stackoverflow.com/5ervant){:target="_blank"}
+
+You can find the source code of this site at [github.com/5ervant/5ervant.github.io](https://github.com/5ervant/5ervant.github.io), you can also become a **contributor** by improving its code or my grammar, spelling, typo or my typing if you want..
