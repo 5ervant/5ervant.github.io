@@ -1,0 +1,24 @@
+<div class="sidebar">
+	<aside class="products">
+		<h4>Products</h4>
+		<div class="scripts">
+			{% for page in pages %}
+			{% if page.title and page.tags contains 'scripts' %}
+			<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+			{% endif %}
+			{% endfor %}
+		</div>
+	</aside>
+	<aside class="services">
+		<h4>Services</h4>
+		{% include snippets/service-payment.html %}
+	</aside>
+	<aside class="servers">
+		<p class="small">My demo servers for, as listed:</p>
+		<ul class="list-unstyled text-center">
+			<li><a href="http://demo.heliohost.org/wordpress/" target="_blank"><img src="/assets/img/wordpress-logo-hoz-rgb.png" alt="WordPress" /></a></li>
+			<li><a href="http://demo.heliohost.org/php/" target="_blank"><img src="/assets/img/php-med-trans.png" alt="PHP" /></a></li>
+			<li><a href="http://demo.heliohost.org/jquery/" target="_blank"><img src="/assets/img/1442386117_JQuery_logo.png" alt="jQuery" /></a></li>
+		</ul>
+	</aside>
+</div>

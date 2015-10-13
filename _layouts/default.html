@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+	{% include head.html %}
 
-  <body>
+	<body>
 
-    {% include header.html %}
+		{% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+		<div class="page-content">
+			<div class="wrapper">
+				<div class="row">
+					<div class="col-sm-9">
+						{{ content }}
+						{% include snippets/comment.html %}
+					</div>
+					<div class="col-sm-3">
+						{% include sidebar.html %}
+					</div>
+				</div>
+			</div>
+		</div>
 
-    {% include footer.html %}
+		{% include footer.html %}
+		{% include snippets/before-closing-body.html %}
 
-  </body>
+	</body>
 
 </html>
