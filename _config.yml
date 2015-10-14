@@ -2,8 +2,8 @@
 title: 5ervant's Website
 email: 5ervant <em>[@t]</em> protonmail <em>[d0t]</em> com
 description: > # this means to ignore newlines until "baseurl:"
-  5ervant's website and his products and services related about desktop
-  and web application development, with a blog about technology.
+  5ervant's website and his products and services related about web
+  and desktop application development, with a blog about technology.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://5ervant.github.io" # the base hostname & protocol for your site
 twitter_username:       5ervant
