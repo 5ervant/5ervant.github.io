@@ -14,7 +14,7 @@ The JavaScript plugin is supported to be called by a class selector for multiple
 		<a class="btn btn-primary btn-lg" href="doc.html" role="button" style="width: 100%;">Documentation</a>
 	</div>
 	<div class="col-sm-5">
-		<a class="btn btn-primary btn-lg" href="http://demo.heliohost.org/jquery/scrollside/" role="button" style="width: 100%;">Demo</a>
+		<a class="btn btn-primary btn-lg" href="http://demo.heliohost.org/jquery/scrollside/" role="button" target="_blank" style="width: 100%;">Demo</a>
 	</div>
 </div>
 

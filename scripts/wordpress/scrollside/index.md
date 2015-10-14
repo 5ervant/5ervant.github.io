@@ -18,7 +18,7 @@ The WordPress plugin for making your existing sidebar dynamically moving and fol
 		<a class="btn btn-primary btn-lg" href="doc.html" role="button" style="width: 100%;">Documentation</a>
 	</div>
 	<div class="col-sm-5">
-		<a class="btn btn-primary btn-lg" href="http://demo.heliohost.org/wordpress/scrollside/" role="button" style="width: 100%;">Demo</a>
+		<a class="btn btn-primary btn-lg" href="http://demo.heliohost.org/wordpress/scrollside/" role="button" target="_blank" style="width: 100%;">Demo</a>
 	</div>
 </div>
 
