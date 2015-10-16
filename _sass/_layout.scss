@@ -271,6 +271,9 @@
 		form {
 			font-size: small;
 
+			tbody > tr:first-child > td {
+				font-weight: bold;
+			}
 			select {
 				width: 100%;
 			}

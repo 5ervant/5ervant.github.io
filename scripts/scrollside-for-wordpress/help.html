@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Scrollside for WordPress' Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		img { max-width: 100%; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;Scrollside for WordPress&rdquo; Documentation by &ldquo;5ervant&rdquo; v1.0</h3>
+
+		<hr>
+
+		<h1 class="center">&ldquo;Scrollside - WordPress Scrolling Sidebar&rdquo;</h1>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+						Updated: 10/16/2015<br>
+						By: Mark Anthony B. Dungo<br>
+						Email: <small>5ervant [@t] protonmail [d0t] com</small>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+
+			<div class="span-12 last">
+				<!--<p class="prepend-top append-0">Thank you for purchasing my item. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/5ervant?ref=5ervant">here</a>. Thanks so much!</p>-->
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#installation">Installation and Activation</a></li>
+			<li><a href="#configuration">Configuration</a></li>
+			<li><a href="#features">Features</a></li>
+			<li><a href="#settings">Settings and Options</a></li>
+			<li><a href="#troubleshooting">Troubleshooting</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="installation"><strong>A) Installation and Activation</strong> - <a href="#toc">top</a></h3>
+
+		<p>If you already purchased and downloaded the Scrollside's WordPress plugin in a .zip format, you may now follow these instructions:</p>
+
+		<ol>
+			<li>In your WordPress administrative "Dashboard", go to Plugins -> Add New.</li>
+			<li>In that page, click the "Upload Plugin" link next to the heading <b>Add Plugins</b>.</li>
+			<li>Then click "Choose File" and select the .zip file that you've purchased and click "Open".</li>
+			<li>And then click "Install Now" and wait for a few seconds.</li>
+			<li>If <i>"Plugin installed successfully"</i> shown, you can now activate it by pressing "Activate Plugin" in the page where you are.</li>
+			<li>And <b>Congrats</b>, the plugin is now activated!</li>
+		</ol>
+
+		<p>After activating, you can now see the "Scrollside" options page under the "Settings" menu, go to that page to start configuring the plugin.</p>
+
+		<hr>
+
+		<h3 id="configuration"><strong>B) Configuration</strong> - <a href="#toc">top</a></h3>
+
+		<p>What we need to do is to set the 3 HTML elements that represents the row, sidebar's container and the specific sidebar that you want to dynamically scroll and follow the user scrolls.</p>
+
+		<ol>
+			<li>
+				<p>Lets say we will configure our plugin to "Add New Scrollside" settings for the left sidebar of a <strong>Twenty Fourteen</strong> theme. Let's open our homepage in Google Chrome or in Mozilla Firefox:</p>
+				<a href="assets/images/demo.jpg"><img src="assets/images/demo.jpg" alt="Demo"></a><br><br>
+			</li>
+			<li>
+				<p>Point our mouse to the very top content of our target sidebar, click the right mouse button then after that, click <b>"Inspect Element"</b>:</p>
+				<a href="assets/images/inspect-element.jpg"><img src="assets/images/inspect-element.jpg" alt="Inspect Element"></a><br><br>
+			</li>
+			<li>
+				<p>Here's the example that you'll going to see after the previous instruction, the <b>Developer Tools</b> will be displayed on the bottom:</p>
+				<a href="assets/images/inspected-element.jpg"><img src="assets/images/inspected-element.jpg" alt="Inspected Element"></a><br><br>
+			</li>
+			<li>
+				<p>In the Developer Tools, search upwards for the very first row's element by moving your mouse. The element you're hovering will be highlighted. Search for the first row's element that highlights all the entire area of the sidebar and the main content of the site. It usually has the ID or class name of "main", "site-main", "content" or "site-content".</p>
+				<p>In this example, the row has the ID of "main". To identify it, we can use the <b>"#main"</b> selector (notice that it's preceded with a "#", meaning that it's an "ID"). If ever the row didn't have that ID, we could have used its "site-main" class and identify it like <b>".site-main"</b> (just preceded with a dot if it's a "class").</p>
+				<a href="assets/images/inspecting-row.jpg"><img src="assets/images/inspecting-row.jpg" alt="Inspecting Row"></a><br><br>
+			</li>
+			<li>
+				<p>And because the left sidebar of a Twenty Fourteen theme doesn't have a sidebar's container or an outer sidebar, we will assume that the sidebar's container and the sidebar are one..</p>
+			</li>
+			<li>
+				<p>Now we must do the same thing to find our sidebar. Point our mouse to the element that highlights the entire sidebar and get its identifier. It usually has the class "widget-area". In this example, we got the <b>"#secondary"</b> ID selector to identify it.</p>
+				<a href="assets/images/inspecting-scrollside.jpg"><img src="assets/images/inspecting-scrollside.jpg" alt="Inspecting Scrollside"></a><br><br>
+			</li>
+			<li>
+				<p>Finally, we're going to "Settings -> Scrollside" from the administrative "Dashboard". In the "Scrollside Settings" page, click "Add New Scrollside" and input "<code>#secondary</code>" into both the "Scrollside selector" and the "Sidebar selector", and "<code>#main</code>" into the "Row selector":</p>
+				<a href="assets/images/add-new-scrollside.jpg"><img src="assets/images/add-new-scrollside.jpg" alt="Add New Scrollside"></a><br><br>
+				<p>If ever your sidebar has an outer sidebar or is inside of a sidebar's container, you may put the sidebar's container selector into the "Scrollside selector" field where it truly belongs, and the inner sidebar selector into the "Sidebar selector".</p>
+			</li>
+		</ol>
+
+		<p>If you have any issues, you can contact me or drop a comment in the discussion of this item on CodeCanyon with your website address and tell the specific sidebar that you want to scroll, and I'll try to find these selectors for you.</p>
+
+		<hr>
+
+		<h3 id="features"><strong>C) Features</strong> - <a href="#toc">top</a></h3>
+
+		<b>Multiple Scrollside Settings</b>
+		<p>You can add more Scrollside Settings for different sidebars on your WordPress site, you can also delete or modify it. Here's the example of the settings for all the sidebars of a Twenty Fourteen theme:</p>
+
+		<a href="assets/images/scrollside-settings.jpg"><img src="assets/images/scrollside-settings.jpg" alt="Scrollside Settings"></a><br><br>
+
+		<b>Class Selector for Multiple Scrollsides</b>
+		<p>In case you have two different sidebar's containers with the same class name on a single row in the same web page, you can just add a single Scrollside Settings for those two scrollsides by providing their "Row selector", their identical <b>class selector for the "Scrollside selector"</b> field and their "Sidebar selector".</p>
+
+		<b>Bootstrap Grid System Compatible</b>
+		<p>It's Bootstrap 12-column grid system compatible! If your theme is using <strong>Bootstrap grid system</strong> and you want to make the mobile responsiveness rely in a predefined grid class <code>col-*-*</code> of your scrollside, here's a few things to consider:</p>
+		<ul>
+			<li>Find the sidebar's container element with a class <code>col-*-*</code> to input its unique CSS selector into the "Scrollside selector" field.</li>
+			<li>Set the "Row selector" field to "<code>.row</code>", the class "row" is a Bootstrap predefined grid class for a row's element.</li>
+			<li>And leave the "Mobile width" field to "<code>true</code>".</li>
+		</ul>
+
+		<hr>
+
+		<h3 id="settings"><strong>D) Settings and Options</strong> - <a href="#toc">top</a></h3>
+
+		<p>Here's the overview of the Scrollside Settings' fields:</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Scrollside selector</td>
+					<td>CSS selector</td>
+					<td>#secondary</td>
+					<td>A <code>.class-name</code>, <code>#id-attribute</code> or any CSS selector for the sidebar's container that'll become a scrollside, or any selector for the sidebar if you doesn't have an outer sidebar.</td>
+				</tr>
+				<tr>
+					<td>Row selector</td>
+					<td>CSS selector</td>
+					<td>#main</td>
+					<td>CSS selector for the row's element that contains the sidebar, main content's element and the other element(s) if any. Set to <code>.row</code> if your theme is using Bootstrap grid system.</td>
+				</tr>
+				<tr>
+					<td>Sidebar selector</td>
+					<td>CSS selector</td>
+					<td>>:first-child</td>
+					<td>CSS selector for the sidebar that's inside of the sidebar's container or outer sidebar. By default, it will select the first child element of the scrollside to be the sidebar. If your sidebar doesn't have an outer container, you can just put your sidebar's selector (not the default one) in both "Scrollside selector" and "Sidebar selector" fields.</td>
+				</tr>
+				<tr>
+					<td>Mobile width</td>
+					<td>number or boolean</td>
+					<td>true</td>
+					<td>The max-width (in pixels) of the document for mobile view where the sidebar's top-margin will set back to its original position and will start moving again when the viewport become above it. Just set to <code>true</code> for automatic mobile width or if your theme is using Bootstrap grid system, or <code>false</code> for forever moving sidebar.</td>
+				</tr>
+				<tr>
+					<td>Mobile animate</td>
+					<td><code>'auto'</code>, <code>'css'</code> or <code>'scroll'</code></td>
+					<td>auto</td>
+					<td>Mobile animation will only perform if the desktop view become in mobile. The default <code>auto</code> will auto scroll back the sidebar to its original position. Setting to <code>css</code> will auto statically set back the sidebar without animation. And <code>scroll</code> is just like the <code>auto</code> but the animation will only perform when you scroll.</td>
+				</tr>
+				<tr>
+					<td>Top padding</td>
+					<td>number</td>
+					<td>15</td>
+					<td>Not a literal top padding, it's an additional margin-top (in pixels) of the sidebar when it's moving.</td>
+				</tr>
+				<tr>
+					<td>Top padding decrement</td>
+					<td>negative number</td>
+					<td>-15</td>
+					<td>Must be a negative number, it's the "Top padding" decrementation if the sidebar's bottom reaches the row's bottom. It's very useful if your row's element is unexpectedly increasing its height due to the reaching of the moving sidebar on its bottom.</td>
+				</tr>
+				<tr>
+					<td>Scroll duration</td>
+					<td>number or the string <code>'fast'</code> or <code>'slow'</code></td>
+					<td>400</td>
+					<td>Milliseconds to complete the sidebar's moving animation per scroll. The strings <code>fast</code> and <code>slow</code> can be supplied to indicate durations of 200 and 600 milliseconds.</td>
+				</tr>
+				<tr>
+					<td>Mobile duration</td>
+					<td>number</td>
+					<td>2000</td>
+					<td>Milliseconds to complete the moving back to the original position of the sidebar if the desktop view become mobile view. This will only effect when the "Mobile animate" is not set to <code>css</code>.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr>
+
+		<h3 id="troubleshooting"><strong>E) Troubleshooting</strong> - <a href="#toc">top</a></h3>
+
+		<p>After successfully configuring a scrollside, if the row's height in your web page is unexpectedly increasing INFINITELY when the sidebar's bottom is reaching the row's bottom upon down scrolls (this may happen if the sidebar isn't the first child element of the scrollside), then you can try to make the <strong>"Top padding decrement"</strong> more negatively like -50, -75, -100 or more depends on the additional top/bottom margin or padding of your inner/outer sidebar or of the other element(s).</p>
+
+		<hr>
+
+		<h3 id="credits"><strong>F) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+
+		<p>I've included the following JavaScript library.</p>
+
+		<ul>
+			<li><a href="https://github.com/5ervant/responsive-bootstrap-toolkit">Responsive Bootstrap Toolkit</a> (Contributor)</li>
+		</ul>
+
+		<hr>
+
+		<!--<p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you if you have any questions relating to this item. No guarantees, but I'll do my best to assist. If you have a more general question relating to the items on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>--> 
+
+		<p class="append-bottom alt large"><strong>5ervant (Mark Anthony Dungo)</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
