@@ -18,6 +18,3 @@ markdown: kramdown
 
 # Conversion
 highlighter: rouge
-
-# Outputting
-permalink: /:path/
