@@ -18,3 +18,11 @@ markdown: kramdown
 
 # Conversion
 highlighter: rouge
+
+# Pages permalink
+defaults:
+  -
+    scope:
+      type: "pages"
+    values:
+      permalink: /:path/:basename
