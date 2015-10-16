@@ -20,4 +20,4 @@ markdown: kramdown
 highlighter: rouge
 
 # Outputting
-permalink: /:path/
+permalink: /:path/test
