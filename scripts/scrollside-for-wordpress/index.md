@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Scrollside: Scrolling Sidebar for WordPress"
-permalink: "/:path/"
+permalink: /:title/
 tags: scripts wordpress plugin scrolling sidebar
 ---
 
