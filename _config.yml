@@ -17,12 +17,12 @@ markdown: kramdown
 
 
 # Conversion
-highlighter: rouge
+highlighter: pygments
 
-# Pages permalink
-defaults:
-  -
-    scope:
-      type: "pages"
-    values:
-      permalink: /:path/:basename
+## Pages permalink
+#defaults:
+#  -
+#    scope:
+#      type: "pages"
+#    values:
+#      permalink: /:path/:basename
