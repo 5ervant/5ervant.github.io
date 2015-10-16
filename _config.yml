@@ -19,6 +19,7 @@ markdown: kramdown
 # Conversion
 highlighter: pygments
 
+permalink: /:title/
 ## Pages permalink
 #defaults:
 #  -
