@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Scrollside: Scrolling Sidebar for jQuery"
-permalink: /:path/
+permalink: /:path
 tags: scripts jquery plugin scrolling sidebar
 ---
 
