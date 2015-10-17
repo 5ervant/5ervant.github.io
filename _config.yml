@@ -19,11 +19,9 @@ markdown: kramdown
 # Conversion
 highlighter: pygments
 
-permalink: /:path/
-## Pages permalink
-#defaults:
-#  -
-#    scope:
-#      type: "pages"
-#    values:
-#      permalink: /:path/:basename
+# Pages permalink
+defaults:
+    scope:
+      type: "pages"
+    values:
+      permalink: /:title/
