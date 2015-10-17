@@ -18,10 +18,3 @@ markdown: kramdown
 
 # Conversion
 highlighter: pygments
-
-# Pages permalink
-defaults:
-    scope:
-      type: "pages"
-    values:
-      permalink: /:title/
