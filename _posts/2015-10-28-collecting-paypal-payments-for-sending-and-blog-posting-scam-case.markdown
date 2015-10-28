@@ -15,6 +15,7 @@ categories: blog security
   - $20.00 USD to vanvuongnguyenhuyen@gmail.com Huyen Nguyen Thu (# 7L610255DC481811A) as personal payment.
 - On 3:17 AM, after I send the $210 to ceo.techdatacorporation@gmail.com **(Customer Service Phone: +91 2703431)**, I reviewed the [User Agreement for PayPal Services]{:target="_blank"} because I'm a rule abiding. And when I see the section *10. Restricted Activities. f. Send unsolicited email to a User or use the PayPal Services to collect payments for sending, or assisting in sending, unsolicited email to third parties;* I realize that I think it's against the ToS, and after that, I just finished THAT SINGLE JOB because I'm a good freelancer and not willing to accept such kind of gig anymore.
 - Aug. 30, 11:26 AM in the morning, I ask him if there's referring the specific PayPal rule but he denied that there's no illegal activity. I have a lot of stress doing that single gig but I still finish to make my client satisfy as what I'm always doing..
+- But on October 20, 2015, the buyer that sent me the $300 escalated a dispute (Case ID PP-004-258-676-995) to a claim!
 
 **Would you like to show some support the try this scammer to get caught?**
 
