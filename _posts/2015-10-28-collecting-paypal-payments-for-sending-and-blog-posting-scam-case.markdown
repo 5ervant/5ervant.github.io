@@ -7,7 +7,7 @@ categories: blog security
 - On August 18, 2015, 2:11 PM (in the Philippine Time), I've seen the scammer post [Looking to hire Virtual Assistants]{:target="_blank"} and contacted him via his email.
 - August 29, 11:57 PM, the scammer replied to my email asking for my Skype account.
 - Aug. 30, 12:00 AM, the evil invited me add on Skype, and on 12:01 AM, I shared my contact details.
-- And on Aug. 30, 12 to 4 AM, the scammer tell me what to do, to collect a PayPay payment from and send it to some people telling that we're doing an SEO business and I tried it to see how it works.
+- On 12:58 AM, the scammer tell me what to do, to collect a PayPay payment from and send it to some people telling that we're doing an SEO business and I will get a fee of 5% for every incoming transaction, and I tried it to see how it works.
 - Aug. 30, 02:59:42 GMT+08:00, I receive $300 from patelzmartinc@yahoo.com (Transaction ID # 55098245D3956733W) with a note: "Link Acquisition for Buzzfeed for kohlscouponsonline.com".
 - Aug. 30, 3:01 AM, the scammer said, send the money to these people in different purposes of payments:
   - $30.00 USD for lancelottucker251@gmail.com [Lancelot Tucker \| LinkedIn] (# 7WW038243A039061C) as personal payment. *(On 3.09 AM, I'd asked him if there's illegal activities on our transactions but he said we deal completely in links and website development.)*
