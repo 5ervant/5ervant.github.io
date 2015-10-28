@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to My Website!"
 date:   2015-10-11 14:10:35
-categories: jekyll update
+categories: blog update
 ---
 Hello and welcome to my free website where will I publish and offer some of my products and services related about desktop and web application development.
 

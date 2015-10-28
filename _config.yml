@@ -16,5 +16,8 @@ facebook_username:      5ervant
 markdown: kramdown
 
 
-# Conversion
-highlighter: pygments
+# Handling Reading
+encoding: "utf-8"
+
+# Outputting
+permalink: pretty
