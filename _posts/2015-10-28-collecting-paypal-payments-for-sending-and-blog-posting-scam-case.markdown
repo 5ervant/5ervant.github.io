@@ -17,6 +17,7 @@ categories: blog security
 - Aug. 30, 11:26 AM in the morning, I ask him if there's referring the specific PayPal rule but he denied that there's no illegal activity. I have a lot of stress doing that single gig but I still finish to make my client satisfy as what I'm always doing..
 
 **Would you like to show some support the try this scammer to get caught?**
+
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="5JLSMKZXTVJWQ">
