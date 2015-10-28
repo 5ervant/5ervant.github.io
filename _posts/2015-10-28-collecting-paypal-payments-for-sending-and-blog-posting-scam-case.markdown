@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Collecting PayPal Payments for Sending and Blog Posting Scam's Case"
+title:  "Collecting PayPal Payments for Sending and Blog Posting Scams' Case"
 date:   2015-10-28 22:59:50
 categories: blog security
 ---
