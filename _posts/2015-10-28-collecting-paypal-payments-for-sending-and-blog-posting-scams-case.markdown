@@ -4,6 +4,8 @@ title:  "Collecting PayPal Payments for Sending and Blog Posting Scams' Case"
 date:   2015-10-28 22:59:50
 categories: blog security
 ---
+[](https://forums.digitalpoint.com/threads/caution-about-collecting-paypal-payments-for-sending-and-blog-posting-scams.2766988/){:target="_blank"}
+
 - On August 18, 2015, 2:11 PM (in the Philippine Time), I've seen the scammer post [Looking to hire Virtual Assistants]{:target="_blank"} and contacted him via his email.
 - August 29, 11:57 PM, the scammer replied to my email asking for my Skype account.
 - Aug. 30, 12:00 AM, the evil invited me add on Skype, and on 12:01 AM, I shared my contact details.
