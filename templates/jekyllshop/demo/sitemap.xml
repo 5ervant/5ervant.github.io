@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 		xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-		xmlns:product="http://127.0.0.1:4000/jekyllshop/product_schema/">
+		xmlns:product="https://5ervant.github.io/templates/jekyllshop/demo/product_schema/">
 	
 		
 	
@@ -20,7 +20,7 @@
 		
 			
 				<url>
-					<loc>http://127.0.0.1:4000/jekyllshop/products/nikon-d5300/</loc>
+					<loc>https://5ervant.github.io/templates/jekyllshop/demo/products/nikon-d5300/</loc>
 
 					
 						
@@ -83,13 +83,13 @@
 					
 						
 							<image:image>
-								<image:loc>http://127.0.0.1:4000/jekyllshop/products/nikon-d5300/1.gif</image:loc>
+								<image:loc>https://5ervant.github.io/templates/jekyllshop/demo/products/nikon-d5300/1.gif</image:loc>
 							</image:image>
 						
 					
 						
 							<image:image>
-								<image:loc>http://127.0.0.1:4000/jekyllshop/products/nikon-d5300/2.gif</image:loc>
+								<image:loc>https://5ervant.github.io/templates/jekyllshop/demo/products/nikon-d5300/2.gif</image:loc>
 							</image:image>
 						
 					
@@ -144,7 +144,7 @@
 		
 			
 				<url>
-					<loc>http://127.0.0.1:4000/jekyllshop/products/sample-product-1/</loc>
+					<loc>https://5ervant.github.io/templates/jekyllshop/demo/products/sample-product-1/</loc>
 
 					
 						
@@ -248,7 +248,7 @@
 		
 			
 				<url>
-					<loc>http://127.0.0.1:4000/jekyllshop/products/sample-product-2/</loc>
+					<loc>https://5ervant.github.io/templates/jekyllshop/demo/products/sample-product-2/</loc>
 
 					
 						
@@ -356,7 +356,7 @@
 		
 			
 				<url>
-					<loc>http://127.0.0.1:4000/jekyllshop/products/sony-nex-6/</loc>
+					<loc>https://5ervant.github.io/templates/jekyllshop/demo/products/sony-nex-6/</loc>
 
 					
 						
@@ -423,13 +423,13 @@
 					
 						
 							<image:image>
-								<image:loc>http://127.0.0.1:4000/jekyllshop/products/sony-nex-6/1.gif</image:loc>
+								<image:loc>https://5ervant.github.io/templates/jekyllshop/demo/products/sony-nex-6/1.gif</image:loc>
 							</image:image>
 						
 					
 						
 							<image:image>
-								<image:loc>http://127.0.0.1:4000/jekyllshop/products/sony-nex-6/2.gif</image:loc>
+								<image:loc>https://5ervant.github.io/templates/jekyllshop/demo/products/sony-nex-6/2.gif</image:loc>
 							</image:image>
 						
 					
