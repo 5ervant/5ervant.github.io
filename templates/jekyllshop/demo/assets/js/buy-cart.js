@@ -107,9 +107,9 @@ function setOrderDetails( method, type ) {
 
 	switch ( type ) {
 		case 'buy':
-			localStorage.setItem( 'productPaymentMade', $( '#reviewProduct' )[0].innerHTML );
-			localStorage.setItem( 'quantityPaymentMade', $( '#reviewQuantity' )[0].innerHTML );
-			localStorage.setItem( 'totalPaymentMade', $( '#reviewTotal' )[0].innerHTML );
+			localStorage.setItem( 'productPaymentMade', $( '#reviewProduct' ).text() );
+			localStorage.setItem( 'quantityPaymentMade', $( '#reviewQuantity' ).text() );
+			localStorage.setItem( 'totalPaymentMade', $( '#reviewTotal' ).text() );
 			break
 		case 'cart':
 			localStorage.setItem( 'productsPaymentMade', localStorage.getItem( 'addedProducts' ) );

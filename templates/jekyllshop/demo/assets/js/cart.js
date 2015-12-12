@@ -17,9 +17,12 @@ $( '#cartButton' ).click( function () {
 	var quantity = parseInt( previewQuantity.val() );
 	var image = $( '#productCarousel img' ).attr( 'src' );
 
+	var productStock = $( '#productStock' );
+	var stock = ( productStock.length ) ? parseInt( productStock.text() ) : 99;
+
 	if ( localStorage.getItem( 'addedProducts' ) === null ) {
 		var addedProducts = [ ];
-		addedProducts.push( { permaname: permaname, title: title, price: signedPrice, quantity: quantity, image: image } );
+		addedProducts.push( { permaname: permaname, title: title, price: signedPrice, quantity: quantity, image: image, stock: stock } );
 		localStorage.setItem( 'addedProducts', JSON.stringify( addedProducts ) );
 	} else {
 		var addedProducts = JSON.parse( localStorage.getItem( 'addedProducts' ) );
@@ -32,7 +35,7 @@ $( '#cartButton' ).click( function () {
 			}
 		}
 		if ( !isProductAdded ) {
-			addedProducts.push( { permaname: permaname, title: title, price: signedPrice, quantity: quantity, image: image } );
+			addedProducts.push( { permaname: permaname, title: title, price: signedPrice, quantity: quantity, image: image, stock: stock } );
 		}
 		localStorage.setItem( 'addedProducts', JSON.stringify( addedProducts ) );
 	}
@@ -66,7 +69,7 @@ if ( getAddedProducts !== null && getAddedProducts !== '[]' ) {
 		var product = 0;
 		for ( var prod in addedProducts ) {
 			var elem = addedProducts[prod];
-			addCartProduct( cartProductsList, elem );
+			addCartProduct( cartProductsList, elem, prod );
 			product += Number( addedProducts[prod].price.replace( /([\D]+)/, '' ) ) * addedProducts[prod].quantity;
 			console.log( elem );
 		}
@@ -82,6 +85,24 @@ if ( getAddedProducts !== null && getAddedProducts !== '[]' ) {
 				document.location.reload();
 			}
 			return false;
+		} );
+
+		$( function () {
+			$( '.form-control' ).change( function () {
+				var input = $( this );
+				var inputQuantity = Number( input.val() );
+				var inputMax = Number( input.attr( 'max' ) );
+				var prodIndex = Number( input.attr( 'id' ).replace( /([\D]+)/, '' ) );
+				if ( inputQuantity < 1 )
+					addedProducts[prodIndex].quantity = 1;
+				else if ( inputQuantity > inputMax )
+					addedProducts[prodIndex].quantity = inputMax;
+				else
+					addedProducts[prodIndex].quantity = inputQuantity;
+
+				localStorage.setItem( 'addedProducts', JSON.stringify( addedProducts ) );
+				document.location.reload();
+			} );
 		} );
 	}
 } else if ( $( '#cartEmpty' ).length ) {
@@ -182,18 +203,18 @@ if ( $( '.checkout' ).length ) {
 			$( '#skrillNoteToSeller' ).val( $( this )[0].value );
 		} );
 	}
-}
 
-$( '#checkoutPaypal' ).click( function () {
-	setOrderDetails( 'PayPal', 'cart' );
-	localStorage.setItem( 'queuedRemoveProducts', localStorage.getItem( 'addedProducts' ) );
-	localStorage.removeItem( 'addedProducts' );
-} );
-$( '#checkoutSkrill' ).click( function () {
-	setOrderDetails( 'Skrill', 'cart' );
-	localStorage.setItem( 'queuedRemoveProducts', localStorage.getItem( 'addedProducts' ) );
-	localStorage.removeItem( 'addedProducts' );
-} );
+	$( '#checkoutPaypal' ).click( function () {
+		setOrderDetails( 'PayPal', 'cart' );
+		localStorage.setItem( 'queuedRemoveProducts', localStorage.getItem( 'addedProducts' ) );
+		localStorage.removeItem( 'addedProducts' );
+	} );
+	$( '#checkoutSkrill' ).click( function () {
+		setOrderDetails( 'Skrill', 'cart' );
+		localStorage.setItem( 'queuedRemoveProducts', localStorage.getItem( 'addedProducts' ) );
+		localStorage.removeItem( 'addedProducts' );
+	} );
+}
 
 
 
@@ -258,7 +279,7 @@ if ( $( '.landing' ).length && localStorage.getItem( 'methodPaymentType' ) === '
 
 // Functions
 
-function addCartProduct( parent, elem ) {
+function addCartProduct( parent, elem, index ) {
 	var signedPrice = elem.price;
 	var currency = signedPrice.replace( /([\d\.]+)/, '' );
 	var priceNumber = Number( signedPrice.replace( /([\D]+)/, '' ) );
@@ -274,7 +295,12 @@ function addCartProduct( parent, elem ) {
 		<h4 class="media-heading"><a href="' + url + '">' + elem.title + '</a></h4>\n\
 		<ul class="list-inline text-center">\n\
 			<li><small>price:</small> ' + elem.price + '</li>\n\
-			<li><small>quantity:</small> &times; ' + elem.quantity + '</li>\n\
+			<li class="form-inline">\n\
+				<div class="form-group">\n\
+					<label for="cartInputQuantity' + index + '" class="small">quantity:</label>\n\
+					&times; <input type="number" class="form-control" id="cartInputQuantity' + index + '" value="' + elem.quantity + '" min="1" max="' + elem.stock + '" />\n\
+				<div>\n\
+			</li>\n\
 			<li>=</li>\n\
 			<li><small>subtotal:</small> <span class="h2"><small>' + currency + '</small>' + product + '</span></li>\n\
 		</ul>\n\
