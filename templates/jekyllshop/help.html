@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Jekyllshop Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		.logo { height: 100px; }
+		pre {
+			background-color: #fafafa;
+			padding: 15px 0;
+			overflow-x: auto;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;Jekyllshop&rdquo; Documentation by &ldquo;5ervant&rdquo; v0.9.8 BETA</h3>
+
+		<hr>
+
+		<div class="center">
+			<img class="logo" src="assets/images/jekyllshop-logo-black.gif" alt="Jekyllshop" />
+			<h1>&ldquo;The eCommerce Solution for Jekyll&rdquo;</h1>
+		</div>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+						Updated: 12/2015<br>
+						By: Mark Anthony B. Dungo<br>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/5ervant?ref=5ervant">here</a>.</p>
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#installation">Jekyllshop Installation</a></li>
+			<li><a href="#importantFolders">Important Folders</a></li>
+			<li><a href="#creatingCategories">Creating Categories</a></li>
+			<li><a href="#creatingProducts">Creating Products</a></li>
+			<li><a href="#productImages">Uploading Product Images</a></li>
+			<li><a href="#authorDetails">Specifying Author Details</a></li>
+			<li><a href="#configuration">Jekyllshop Configuration</a></li>
+			<li><a href="#pageDescriptions">Jekyllshop Page Descriptions</a></li>
+			<li><a href="#creatingPages">Creating Pages</a></li>
+			<li><a href="#uploadingLogo">Uploading Logo, Header and Favicon</a></li>
+			<li><a href="#installingComments">Installing a Comments Plugin</a></li>
+			<li><a href="#widgetsPlugins">Widgets and Plugins</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+
+			<li><a href="#themeDevelopers">For Child Theme Developers</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="installation"><strong>A) Jekyllshop Installation</strong> - <a href="#toc">top</a></h3>
+
+		<p>This Jekyll theme is an e-commerce script itself, to generate an awesome static online store with Jekyll. To install it, get the "jekyllshop" folder from the extracted/unzipped "jekyllshop-x.x.x" folder and place it as the theme or as the current directory of your Jekyll site. You can then rename it according to what you want.</p>
+
+		<p>The top-level content structure of the unzipped "jekyllshop-x.x.x" folder looks like this:</p>
+
+		<pre>	.
+	├── assets/	&lt;─ Just the assets for the help file.
+	├── jekyllshop/	&lt;─ THIS IS THE THEME AND IS WHAT YOU NEED TO GET!
+	├── help.html	&lt;─ A help file or this documentation.</pre>
+
+		<h3>Site Settings</h3>
+
+		<p>And go to the "_config.yml" file of the Jekyllshop theme and set their settings, specially the <strong>baseurl</strong> and the <strong>url</strong> settings.</p>
+
+		<pre>	baseurl: "/yourbaseurl"			# the subpath of your site, e.g. /jekyllshop
+	url: "http://www.yourdomain.com"	# the base hostname & protocol for your site</pre>
+
+		<p>You can find out more info about customizing a Jekyll theme, as well as basic Jekyll usage documentation on their website: <a href="http://jekyllrb.com/">jekyllrb.com</a><br>
+		<u>If you did not know Jekyll</u>, then you probably need to read their documentation first and learn how they works!</p>
+
+	<hr>
+
+	<h3 id="importantFolders"><strong>B) Important Folders</strong> - <a href="#toc">top</a></h3>
+
+	<p>Here are the most important folders inside of the Jekyllshop theme's directory that you need to understand:</p>
+
+	<pre>	.
+	├── _data/	&lt;─ Visit http://jekyllrb.com/docs/datafiles/ for the complete info.
+	├── _posts/	&lt;─ Visit http://jekyllrb.com/docs/posts/ for the complete info.
+	├── categories/	&lt;─ This is the folder where the category files are located.
+	├── products/	&lt;─ This is the folder where the product files are located.</pre>
+
+	<p>Those folders' usages will be documented in the following sections of this documentation!</p>
+
+	<hr>
+
+	<h3 id="creatingCategories"><strong>C) Creating Categories</strong> - <a href="#toc">top</a></h3>
+
+	<p>You need to create to a category before you can use it on your product. To create a product category, create a Markdown file, for example, such as "<b>sample-category</b>.md" under the "categories/" folder, in this Markdown format:</p>
+
+	<pre>	---
+	layout: category	# Do not change this
+	title: Sample Category	# Your awesome category name
+	---
+
+	Write an awesome description for your new category here.</pre>
+
+	<p>That category will now be accessible, for example, at: <em>http://www.yourdomain.com/yourbaseurl/categories/<b>sample-category</b>/</em></p>
+
+	<p>The last directory name of its web address will be based on the category filename which in this example is <b>"sample-category"</b> without the ".md" file extension, and you can create as many categories as you want in the "categories/" folder.</p>
+
+	<b>Here are some sample categories:</b>
+	<ul>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/categories/cameras/">https://5ervant.github.io/templates/jekyllshop/demo/categories/cameras/</a></li>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/categories/sample-category-1/">https://5ervant.github.io/templates/jekyllshop/demo/categories/sample-category-1/</a></li>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/categories/sample-category-2/">https://5ervant.github.io/templates/jekyllshop/demo/categories/sample-category-2/</a></li>
+	</ul>
+
+	<hr>
+
+	<h3 id="creatingProducts"><strong>D) Creating Products</strong> - <a href="#toc">top</a></h3>
+
+	<p>To create a product item, create a Markdown file with such basename "<b>sample-product</b>.md", inside of the "products/" folder, in these Markdown and YAML formats:</p>
+
+	<pre>	---
+	title:      "Sample Product"
+	categories: sample-category				# The previously one that we created
+	tags:       sample-tag-1 sample-tag-2
+	price:      0.02
+	sale:       0.01					# Optional
+	stock:      50						# Optional
+	date:       2015-12-30					# Optional
+	meta:       "Just a sample meta for this product."	# Optional
+	author:     YourUsername				# Optional
+	---
+
+	Write an awesome Markdown text for your new product here.</pre>
+
+	<p>That product will now be accessible, e.g. at: <em>http://www.yourdomain.com/yourbaseurl/products/<b>sample-product</b>/</em><br>
+		Its web address' last directory name will be based on the product filename <b>"sample-product"</b> without the ".md" extension.</p>
+
+	<p>You can use more than one category for your product as long as you created them! Separate them with a space " ", just like <var>tags</var>:</p>
+
+	<pre>	categories: sample-category another-sample-category</pre>
+
+	<b>Here are some sample products without images:</b>
+	<ul>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/products/sample-product-1/">https://5ervant.github.io/templates/jekyllshop/demo/products/sample-product-1/</a></li>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/products/sample-product-2/">https://5ervant.github.io/templates/jekyllshop/demo/products/sample-product-2/</a></li>
+	</ul>
+
+	<p><u>You do not need to create a tag file.</u> You can use as many tags as you want, separated by a space " ".<br>
+	A tag name must only have lowercase alphanumeric and a dash, such as "xyz-123".</p>
+
+	<b>Here are some sample specified tags' sections:</b>
+	<ul>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/tags/#tag-1">https://5ervant.github.io/templates/jekyllshop/demo/tags/#tag-1</a></li>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/tags/#nikon">https://5ervant.github.io/templates/jekyllshop/demo/tags/#nikon</a></li>
+	</ul>
+
+	<hr>
+
+	<h3 id="productImages"><strong>E) Uploading Product Images</strong> - <a href="#toc">top</a></h3>
+
+	<p>For example you're going to upload images for your existing "sample-product.md" file, create a folder with a name <b>"sample-product"</b> <i>(the same name as your product filename)</i> under the "products/" folder where your product file is located:</p>
+
+	<pre>	..
+	├── products/sample-product/	&lt;─ The location of your product images.
+	├── products/sample-product.md	&lt;─ Your product file.</pre>
+
+	<p>Inside of the "products/sample-product/" folder, you can upload GIF images and rename them numerically, in the following structure:</p>
+
+	<pre>	../..
+	├── products/sample-product/1.gif
+	├── products/sample-product/2.gif
+	├── products/sample-product/3.gif
+	├──		&lt;─ etc...</pre>
+
+	<p>Rename them from 1 to the next greater number than it the previous one, increment by increment, and don't miss any next number!<br>
+		If you will just upload a single GIF image, then just rename it to "1.gif".</p>
+
+	<b>Here are some sample products with images:</b>
+	<ul>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/products/nikon-d5300/">https://5ervant.github.io/templates/jekyllshop/demo/products/nikon-d5300/</a></li>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/products/sony-nex-6/">https://5ervant.github.io/templates/jekyllshop/demo/products/sony-nex-6/</a></li>
+	</ul>
+
+	<hr>
+
+	<h3 id="authorDetails"><strong>F) Specifying Author Details</strong> - <a href="#toc">top</a></h3>
+
+	<p>For example, the <var>author</var> variable of your post or product's YAML front matter, is set to "YourUsername", you can then add more details for that specific author inside of the "_data/people.yml" file, in such like this YAML format:</p>
+
+	<pre>	YourUsername:				# Your author value
+	    name: Your Name			# Your real name
+	    url: http://www.example.com/	# Your web page address</pre>
+
+	<p>Those details, your real name with a link to your web page will appear on the meta section of your blog posts and your product items.</p>
+
+	<p>For more info, you can visit: <a href="http://jekyllrb.com/docs/datafiles/#example-accessing-a-specific-author">jekyllrb.com/docs/datafiles/#example-accessing-a-specific-author</a></p>
+
+	<b>Here are some sample post and products with specified author details:</b>
+	<ul>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/blog/2015/12/03/sample-blog-post/">https://5ervant.github.io/templates/jekyllshop/demo/blog/2015/12/03/sample-blog-post/</a></li>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/products/nikon-d5300/">https://5ervant.github.io/templates/jekyllshop/demo/products/nikon-d5300/</a></li>
+		<li><a href="https://5ervant.github.io/templates/jekyllshop/demo/products/sony-nex-6/">https://5ervant.github.io/templates/jekyllshop/demo/products/sony-nex-6/</a></li>
+	</ul>
+
+	<hr>
+
+	<h3 id="configuration"><strong>G) Jekyllshop Configuration</strong> - <a href="#toc">top</a></h3>
+
+	<p>In the Jekyllshop directory, there you can see a "_config.yml" file. In that file you can configure your Jekyllshop, just visit that configuration file and set the right settings and payment providers for your online shop.</p>
+
+	<h3>For Examples</h3>
+
+	<ul>
+		<li>You need to disable the BACS a.k.a. direct bank transfer method, then change the <var>bacs_enabled</var> setting to 0:
+			<pre>	bacs_enabled:        0</pre></li>
+		<li>To change your currency, e.g. to Philippine peso, then change the <var>currency_code</var> and the <var>currency_symbol</var> like these:
+			<pre>	currency_code:   PHP
+	currency_symbol: ₱</pre></li>
+		<li>To configure your PayPal email, set the <var>paypal_email</var> setting to your PayPal email address:
+			<pre>	paypal_email:       your-paypal-email@example.com</pre></li>
+		<li>To disable an "Add to Cart" button or the shopping cart system, change the <var>no_cart_button</var> setting to 1:
+			<pre>	no_cart_button:  1</pre></li>
+	</ul>
+
+	<p>And there's a lot more that you can do, just visit the "_config.yml" file and change the settings according to what you want, they are well-commented and easy to understand.</p>
+
+	<p>You can either leave an optional setting blank (without anything even quotes) if you want to exclude it..<br>
+		<i>"How would I know if it's an optional setting or not?"</i> <u>Simply, if you set it to blank and the site couldn't build, means, that setting is required.</u></p>
+
+	<p>To learn how to set the core configuration of a Jekyll site, please visit: <a href="http://jekyllrb.com/docs/configuration/#default-configuration">jekyllrb.com/docs/configuration/#default-configuration</a></p>
+
+	<hr>
+
+	<h3 id="pageDescriptions"><strong>H) Jekyllshop Page Descriptions</strong> - <a href="#toc">top</a></h3>
+
+	<p>You can change the meta descriptions of the Jekyllshop's predefined pages by accessing their Markdown files and editing their contents.</p>
+
+	<p>Here are some of the list of the Jekyllshop's predefined pages that you can edit their descriptions:</p>
+
+	<pre>	.
+	├── cart.md
+	├── checkout.md
+	├── order-details.md	&lt;─ The landing page upon ordering with Bank Transfer or Cash on Delivery method.
+	├── payment-made.md	&lt;─ The landing page when online payment is made.
+	├── shop.md</pre>
+
+	<p>For example, you're going to edit the Shop page's description, simply edit the content of the "shop.md" file.</p>
+
+	<p>Here is a sample Shop page: <a href="https://5ervant.github.io/templates/jekyllshop/demo/shop/">https://5ervant.github.io/templates/jekyllshop/demo/shop/</a></p>
+
+	<hr>
+
+	<h3 id="creatingPages"><strong>I) Creating Pages</strong> - <a href="#toc">top</a></h3>
+
+	<p>To create a page, simply create a Markdown file, e.g. "sample-page.md", under the Jekyllshop theme's directory, in this format:</p>
+
+	<pre>	---
+	layout: page			# Do not change this
+	title: Sample Page
+	<b>permalink: /sample-page/</b>	# Will be its URL's last directory name
+	<b>glyphicon: glyphicon-asterisk</b>	# Will be its page link's icon
+	---
+	
+	Write an awesome Markdown text for your new page here.</pre>
+
+	<p>Your page will now be accessible, e.g. at <em>http://www.yourdomain.com/yourbaseurl<b>/sample-page/</b></em> with its web address' last directory name as the assigned value <b>"/sample-page/"</b> to its YAML front matter's <var>permalink</var> variable.</p>
+
+	<h3>Page Link's Glyphicon</h3>
+
+	<p>To find a right Glyphicon for your page, simply go to <a href="http://getbootstrap.com/components/#glyphicons-glyphs">getbootstrap.com/components/#glyphicons-glyphs</a> and choose the glyph that you want.</p>
+
+	<p>For example, you chose the <em>"glyphicon <b>glyphicon-plus</b>"</em> icon, copy its succeeded text <b>"glyphicon-plus"</b> and put it as the value of the <var>glyphicon</var> variable of your page's YAML front matter, such like this:</p>
+
+	<pre>	glyphicon: glyphicon-plus</pre>
+
+	<p>After doing that, your page link that's listed on your site navigation will now have a "glyphicon-plus" icon.</p>
+
+	<h3>Unlist and Nofollow a Page</h3>
+
+	<p>If you don't want to list your page on your site navigation, just put the line "<code>robots: nofollow</code>" on its YAML front matter.</p>
+
+	<pre>	---
+	layout: page
+	title: Sample Page
+	permalink: /sample-page/
+	<b>robots: nofollow</b>
+	---
+	
+	Write an awesome Markdown text for your new page here.</pre>
+
+	<p>Your page link will now be unlisted on your site navigation. And also, search engines will not list that page in their search results.</p>
+
+	<hr>
+
+	<h3 id="uploadingLogo"><strong>J) Uploading Logo, Header and Favicon</strong> - <a href="#toc">top</a></h3>
+
+	<p>To <u>upload a logo</u> for your site, simply just upload it to the root directory of your Jekyllshop site and rename it as exactly as <b>"logo.gif"</b>.</p>
+
+	<p>To <u>upload a "favicon.ico"</u>, just also upload it to the root directory. It needs a basename as exactly as <b>"favicon.ico"</b>.</p>
+
+	<p>You can also delete the "logo.gif" and the "favicon.ico" if you want. If the "logo.gif" is missing, your site's title will be shown in the logo area.</p>
+
+	<p>To <u>upload a header image</u>, upload a "header"-named GIF image into your root directory. It needs a basename as exactly as <b>"header.gif"</b>.</p>
+
+	<hr>
+
+	<h3 id="installingComments"><strong>K) Installing a Comments Plugin</strong> - <a href="#toc">top</a></h3>
+
+	<p>There are plenty of blog comments' plugins out there that can use, for your blog posts to be able your readers to post a comment.<p>
+
+	<h3>And these are some of them:</h3>
+
+	<ul>
+		<li><a href="https://disqus.com/admin/signup/">Disqus Comments plugin</a> (Drive Engagement)</li>
+		<li><a href="https://developers.facebook.com/docs/plugins/comments">Facebook Comments plugin</a> (Social Plugins)</li>
+	</ul>
+
+	<p>For example, you're going to use Disqus Comments plugin, after configuring your Comments plugin, you can then open the "_includes/plugins/post-comments.html" file and paste the whole Universal Code to be able your comments to load, into that file!</p>
+
+	<hr>
+
+	<h3 id="widgetsPlugins"><strong>L) Widgets and Plugins</strong> - <a href="#toc">top</a></h3>
+
+	<p>You do not need to worry about some other Jekyllshop's predefined widgets and plugins because:</p>
+
+	<ul>
+		<li>Once you've created some products, they will be automatically listed in the <b>Products Vertical</b> and <b>Products Horizontal</b> widgets that are pre-installed on your Jekyllshop.</li>
+		<li>And once your products have their own images, their images will be shown in the <b>Intro-Carousel</b> plugin, the <b>Products Vertical</b> widget and in the <b>Products Horizontal</b> widget.</li>
+		<li>The <b>Search</b> (Engine) widget can start to find a result with or without an image, once you've a created product. And a lot more!</li>
+	</ul>
+
+	<hr>
+
+	<h3 id="credits"><strong>M) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+
+	<p>I've used the following frameworks, images, icons or other files as listed.</p>
+
+	<ul>
+		<li>The base Jekyll theme from jglovier.</li>
+		<li>Bootstrap 3 that's maintained by their core team.</li>
+		<li>The Glyphicon Halflings component of Bootstrap 3.</li>
+		<li>jQuery v1.x by the jQuery Foundation.</li>
+		<li>A logo for Jekyll under MIT License.</li>
+		<li>Camera images from the open-source eviltext-shop-example.</li>
+	</ul>
+
+	<hr>
+
+	<h3 id="themeDevelopers"><strong>N) For Child Theme Developers</strong> - <a href="#toc">top</a></h3>
+
+	<p>For those who are willing to develop a child theme for making the design of a Jekyllshop more attractive, either for free or for commercial, the most allowable contents to redistribute to install into a Jekyllshop theme <u>if you have the license</u> are these folders:</p>
+
+	<pre>	├── _data/
+	├── _includes/
+	├── _layouts/
+	├── _sass/
+	├── assets/images/
+	├── css/</pre>
+
+	<p><strong>An instant and standalone child theme that already has the working Jekyllshop system in itself, is prohibited and not permitted!</strong><br>
+		All of the known and the right child themes for Jekyllshop will be referred or listed in <a href="http://themeforest.net/user/5ervant/portfolio?ref=5ervant">its item page on ThemeForest!</a></p>
+
+	<hr>
+
+	<p>As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+	<p class="append-bottom alt large"><strong>5ervant (Mark Anthony B. Dungo)</strong></p>
+	<p><a href="#toc">Go To Table of Contents</a></p>
+
+	<hr class="space">
+</div><!-- end div .container -->
+</body>
+</html>
