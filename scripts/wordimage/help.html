@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>WordImage Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		td:first-child { white-space: nowrap; }
+		img { max-width: 100%; }
+		img.logo { display: block; margin: 0 30px; max-width: none; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;WordImage&rdquo; Documentation by &ldquo;5ervant&rdquo; v1.1</h3>
+
+		<hr>
+
+		<table>
+			<tr>
+				<td><img class="logo" src="assets/images/wordimage.png" /></td>
+				<td>A premium WordPress plugin that will allow you to use or to instantly attach the customizable <code>[wordimage]</code> shortcode into your post/page for embedding a WordImage generator.</td>
+			</tr>
+		</table>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+						Updated: Jan. 2015<br>
+						By: Mark Anthony B. Dungo<br>
+						Email: <a href="mailto:5ervant@protonmail.com">5ervant@protonmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/5ervant?ref=5ervant">here</a>.</p>
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#installation">Installation and Activation</a></li>
+			<li><a href="#instantShortcode">Instant Shortcoded Page Creation</a></li>
+			<li><a href="#manualShortcode">Manual Shortcode Usage</a></li>
+			<li><a href="#fonts">TrueType Fonts</a></li>
+			<li><a href="#styles">Generator Styles</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="installation"><strong>A) Installation and Activation</strong> - <a href="#toc">top</a></h3>
+
+		<p>If you already purchased and downloaded the WordImage plugin in a .zip format, you may now follow these instructions for installation:</p>
+
+		<ol>
+			<li>In your WordPress administrative "Dashboard", go to Plugins -> Add New.</li>
+			<li>In that page, click the "Upload Plugin" link next to the <b>Add Plugins</b> heading.</li>
+			<li>Then click "Choose File" and select the .zip file that you've purchased and click "Open".</li>
+			<li>And then click "Install Now" and wait for a few seconds.</li>
+			<li>If <i>"Plugin installed successfully"</i> shown, you can now activate it by pressing "Activate Plugin" in the page where you are.</li>
+			<li>And <b>congrats</b>, the plugin is now activated!</li>
+		</ol>
+
+		<p>After activating, you can now see the "WordImage" menu in your "Dashboard".</p>
+
+		<img src="assets/images/wordimage-tools.jpg" /><br /><br />
+
+		<hr>
+
+		<h3 id="instantShortcode"><strong>B) Instant Shortcoded Page Creation</strong> - <a href="#toc">top</a></h3>
+
+		<p>As you can see on the previous image, you can use the form named "Create Instant WordImage Page" on the 'WordImage Tools' to create an instant shortcoded page, that you can edit later. Here's the quick view of that tool's fields:</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Field Name</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Page Title</td>
+					<td>The title of the page that you're going to create.</td>
+				</tr>
+				<tr>
+					<td>Generator Style</td>
+					<td>The generator style that you want to use for your WordImage generator. Choose "All (Selectable)" for a style selection's field on your generator.</td>
+				</tr>
+				<tr>
+					<td>Default Image Text</td>
+					<td>The default text that's initially inputted in the text field(s) of your generator.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<img src="assets/images/wordimage-generator.jpg" /><br /><br />
+
+		<p>The screenshot of a WordImage generator. Some designs of the generator's fields will vary depend on your theme's design.</p>
+
+		<hr>
+
+		<h3 id="manualShortcode"><strong>C) Manual Shortcode Usage</strong> - <a href="#toc">top</a></h3>
+
+		<p>You can manually use the WordImage shortcode on your page's content where you want a WordImage generator to appear, i.e.:</p>
+
+		<pre>	[wordimage style="text-shadow"]Default Image Text[/wordimage]
+		</pre>
+
+		<p>The above shortcode example consists of 3 parts:</p>
+
+		<ol>
+			<li>The <code>[wordimage]</code> shortcode tag for embedding a WordImage generator.</li>
+			<li>The <code>text-shadow</code> style that'll going to use for your generator.</li>
+			<li>And the <em>"Default Image Text"</em> as the initial inputted text for the image text.</li>
+		</ol>
+
+		<p>For example, you'll going to use <b>"all"</b> the generator styles, you can either use this shortcode:</p>
+
+		<pre>	[wordimage style=<b>"all"</b>]WordImage[/wordimage]
+		</pre>
+
+		<p>Or neglect the <code>style</code> attribute as the generator style <b>"all"</b> is assigned by default, such this one:</p>
+
+		<pre>	[wordimage]WordImage[/wordimage]
+		</pre>
+
+		<p>Or you can use this shortcode in the image if you want to use the <b>"text-shadow"</b> generator style:</p>
+
+		<img src="assets/images/wordimage-shortcode.jpg" /><br /><br />
+
+		<p>The available styles that you can use are listed in the <a href="#styles">Generator Styles section</a>.</p>
+
+		<hr>
+
+		<h3 id="fonts"><strong>D) TrueType Fonts</strong> - <a href="#toc">top</a></h3>
+
+		<p>To maximize the uniqueness of your WordImage generator, you can delete all the pre-installed fonts and install your desired fonts.</p>
+
+		<img src="assets/images/wordimage-truetype-fonts.jpg" /><br /><br />
+
+		<h4><strong>Uploading TrueType Font</strong></h4>
+
+		<p>To upload your own TrueType font file:</p>
+
+		<ol>
+			<li>Your TrueType font file must be in a .zip format.</li>
+			<li>In your WordPress administrative "Dashboard", go to WordImage -> TrueType Fonts.</li>
+			<li>Click "Add TrueType Font", a dialog will show up.</li>
+			<li>"Choose File" or "Browse" and open your TrueType font (must be in a .zip format).</li>
+			<li>Then click "Install Now" and wait for a few seconds until the uploading be completed.</li>
+		</ol>
+
+		<h4><strong>Deleting TrueType Font</strong></h4>
+
+		<p>To delete an installed TrueType font file:</p>
+
+		<ol>
+			<li>Go to WordImage -> TrueType Fonts.</li>
+			<li>Point your mouse on the font that you want to delete, there you'll see a "Delete" button appearing.</li>
+			<li>Click that "Delete" and verify it by following a click to the confirmation's "OK" button.</li>
+		</ol>
+
+		<hr>
+
+		<h3 id="styles"><strong>E) Generator Styles</strong> - <a href="#toc">top</a></h3>
+
+		<p>Here's the list of the styles that you can use for your WordImage generator:</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th style="white-space: nowrap;">Version Added</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>all</td>
+					<td>By using this style, the generator will includes a drop-down list for allowing the users to choose what generator style do they want to use and allowing them to preview the styles one by one. Use <code>style="all"</code> or neglect the <code>style</code> attribute to use all the generator styles.</td>
+					<td>v1.0</td>
+				</tr>
+				<tr>
+					<td>text-shadow</td>
+					<td>Convert a text with a shadow, into an image.</td>
+					<td>v1.0</td>
+				</tr>
+				<tr>
+					<td>two-text</td>
+					<td>Convert a two-text, into a single image.</td>
+					<td>v1.0</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><strong>Developer's Note:</strong><br />
+			Go to WordImage -> Generator Styles and check the style location's components if you want to edit their style functionalities.</p>
+
+		<hr>
+
+		<h3 id="credits"><strong>F) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+
+		<p>I've pre-installed the following TrueType font files as listed.</p>
+
+		<ul>
+			<li>Ostrich Sans (bold) by Tyler Finck</li>
+			<li>Reckoner (regular and bold) by Alex Dale</li>
+			<li>REIS (regular) by Marcelo Reis</li>
+			<li>Timber (regular) by Mehmet Reha Tugcu</li>
+		</ul>
+
+		<p>All of the listed fonts above are free for personal/commercial use. Just message me if you have a problem about them.</p>
+
+		<hr>
+
+		<p>As I said at the beginning, I'd be glad to help you if you have any questions relating to this item. No guarantees, but I'll do my best to assist. If you have a more general question relating to the items on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+
+		<p class="append-bottom alt large"><strong>5ervant (Mark Anthony Dungo)</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
